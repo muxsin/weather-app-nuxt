@@ -6,9 +6,14 @@
         <span
           v-for="n in 12"
           :key="n"
-          class="sun__ray"
-          :style="{ transform: `rotate(${(n - 1) * 30}deg)`, animationDelay: `${(n - 1) * 0.25}s` }"
-        />
+          class="sun__ray-wrap"
+          :style="{ transform: `rotate(${(n - 1) * 30}deg)` }"
+        >
+          <span
+            class="sun__ray"
+            :style="{ animationDelay: `${(n - 1) * 0.15}s` }"
+          />
+        </span>
       </div>
       <div class="sun__disc" />
     </div>

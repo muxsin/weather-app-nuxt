@@ -1,11 +1,16 @@
 @keyframes cloud-drift-1 {
-  from { transform: translateX(-100%); }
+  from { transform: translateX(-340px); }
   to   { transform: translateX(110vw); }
 }
 
 @keyframes cloud-drift-2 {
   from { transform: translateX(110vw); }
-  to   { transform: translateX(-100%); }
+  to   { transform: translateX(-400px); }
+}
+
+@keyframes cloud-bob {
+  0%, 100% { margin-top: 0; }
+  50%       { margin-top: -8px; }
 }
 
 .clouds-layer {
@@ -25,41 +30,60 @@
 
 .cloud {
   position: absolute;
-  opacity: 0.6;
   will-change: transform;
 
   svg {
-    fill: var(--color-text-muted);
-    opacity: 0.4;
+    display: block;
+    fill: #ffffff;
+    filter: drop-shadow(0 6px 14px rgba(60, 80, 120, 0.22));
   }
 
   &--1 {
-    top: 6%;
-    left: -200px;
-    width: 280px;
-    animation: cloud-drift-1 40s linear infinite;
+    top: 5%;
+    left: -340px;
+    width: 320px;
+    opacity: 0.88;
+    animation:
+      cloud-drift-1 45s linear infinite,
+      cloud-bob 7s ease-in-out infinite;
   }
 
   &--2 {
-    top: 15%;
-    right: -300px;
-    width: 360px;
-    animation: cloud-drift-2 60s linear infinite;
+    top: 18%;
+    right: -400px;
+    width: 380px;
+    opacity: 0.82;
+    animation:
+      cloud-drift-2 65s linear infinite,
+      cloud-bob 9s ease-in-out infinite;
+    animation-delay: 0s, 2s;
   }
 
   &--3 {
-    top: 30%;
-    left: -250px;
-    width: 200px;
-    opacity: 0.4;
-    animation: cloud-drift-1 80s linear infinite;
+    top: 35%;
+    left: -260px;
+    width: 210px;
+    opacity: 0.68;
+    animation:
+      cloud-drift-1 90s linear infinite,
+      cloud-bob 8s ease-in-out infinite;
+    animation-delay: 8s, 4s;
   }
 
   &--4 {
-    top: 50%;
-    right: -200px;
-    width: 240px;
-    opacity: 0.3;
-    animation: cloud-drift-2 100s linear infinite;
+    top: 55%;
+    right: -280px;
+    width: 260px;
+    opacity: 0.58;
+    animation:
+      cloud-drift-2 110s linear infinite,
+      cloud-bob 10s ease-in-out infinite;
+    animation-delay: 4s, 6s;
   }
+}
+
+// Softer cloud tint on dark theme so white isn't blinding against the dark sky
+[data-theme='dark'] .cloud svg {
+  fill: #c8d8f0;
+  filter: drop-shadow(0 6px 14px rgba(10, 20, 50, 0.45));
 }

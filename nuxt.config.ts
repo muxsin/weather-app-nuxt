@@ -18,7 +18,8 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "${stylesDir}/_variables"; @import "${stylesDir}/_mixins";`
+          additionalData: `@import "${stylesDir}/_variables"; @import "${stylesDir}/_mixins";`,
+          silenceDeprecations: ['import']
         }
       }
     }
