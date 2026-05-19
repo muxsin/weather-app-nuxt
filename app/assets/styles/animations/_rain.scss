@@ -1,0 +1,45 @@
+@keyframes rain-fall {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(20px, calc(100vh + 20px), 0);
+    opacity: 0;
+  }
+}
+
+.rain-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: $z-animation;
+  will-change: transform;
+  contain: strict;
+
+  @include reduced-motion {
+    animation: none;
+
+    .rain__drop {
+      animation: none;
+    }
+  }
+}
+
+.rain__drop {
+  position: absolute;
+  top: -20px;
+  width: 1.5px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, rgba(147, 197, 253, 0.6));
+  border-radius: 2px;
+  animation: rain-fall linear infinite;
+  will-change: transform;
+}

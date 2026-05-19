@@ -1,0 +1,53 @@
+@keyframes snow-fall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(calc(100vh + 20px));
+    opacity: 0;
+  }
+}
+
+@keyframes snow-sway {
+  0%, 100% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 20px;
+  }
+  75% {
+    margin-left: -20px;
+  }
+}
+
+.snow-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: $z-animation;
+  will-change: transform;
+  contain: strict;
+
+  @include reduced-motion {
+    .snow__flake {
+      animation: none;
+    }
+  }
+}
+
+.snow__flake {
+  position: absolute;
+  top: -20px;
+  color: rgba(255, 255, 255, 0.85);
+  animation: snow-fall linear infinite, snow-sway ease-in-out infinite alternate;
+  will-change: transform;
+  user-select: none;
+}

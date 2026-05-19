@@ -1,0 +1,99 @@
+{
+  "common": {
+    "today": "Bugun",
+    "hourly": "Soatlik prognoz",
+    "weekly": "Haftalik prognoz",
+    "chooseCity": "Shahar tanlash",
+    "search": "Shahar qidirish...",
+    "noResults": "Natija topilmadi"
+  },
+  "weather": {
+    "details": {
+      "temperature": "Harorat",
+      "feelsLike": "His qilinadi",
+      "pressure": "Bosim",
+      "precipitation": "Yog'ingarchilik",
+      "wind": "Shamol",
+      "humidity": "Namlik"
+    },
+    "description": {
+      "0": "Ochiq osmon",
+      "1": "Asosan ochiq",
+      "2": "Qisman bulutli",
+      "3": "Bulutli",
+      "45": "Tuman",
+      "48": "Muzli tuman",
+      "51": "Yengil shivalajon",
+      "53": "Shivalajon",
+      "55": "Kuchli shivalajon",
+      "61": "Yengil yomg'ir",
+      "63": "Yomg'ir",
+      "65": "Kuchli yomg'ir",
+      "71": "Yengil qor",
+      "73": "Qor",
+      "75": "Kuchli qor",
+      "77": "Qor donalari",
+      "80": "Jala",
+      "81": "Yomg'irli jala",
+      "82": "Kuchli jala",
+      "85": "Qorli jala",
+      "86": "Kuchli qorli jala",
+      "95": "Momaqaldiroq",
+      "96": "Do'l bilan momaqaldiroq",
+      "99": "Kuchli do'l bilan momaqaldiroq"
+    },
+    "normal": "normal",
+    "noPrecipitation": "Yog'ingarchilik yo'q",
+    "units": {
+      "mmHg": "mm sim.ust.",
+      "ms": "m/s",
+      "mm": "mm",
+      "percent": "%"
+    }
+  },
+  "compass": {
+    "N": "Shimol",
+    "NE": "Shimoli-sharq",
+    "E": "Sharq",
+    "SE": "Janubi-sharq",
+    "S": "Janub",
+    "SW": "Janubi-g'arb",
+    "W": "G'arb",
+    "NW": "Shimoli-g'arb"
+  },
+  "theme": {
+    "light": "Kunduzgi",
+    "dark": "Tungi",
+    "toggle": "Mavzuni o'zgartirish"
+  },
+  "seo": {
+    "home": {
+      "title": "WeatherApp — Real vaqtda ob-havo prognozi",
+      "description": "Istalgan shahar uchun joriy ob-havo, soatlik va 7 kunlik prognozni tekshiring. Standart: Toshkent.",
+      "keywords": ["ob-havo", "prognoz", "WeatherApp"]
+    }
+  },
+  "modal": {
+    "cityPicker": {
+      "title": "Shahar tanlash",
+      "commonCities": "Mashhur shaharlar"
+    }
+  },
+  "cities": {
+    "tashkent": "Toshkent",
+    "samarkand": "Samarqand",
+    "bukhara": "Buxoro",
+    "moscow": "Moskva",
+    "almaty": "Olmaota",
+    "bishkek": "Bishkek",
+    "istanbul": "Istanbul",
+    "dubai": "Dubay",
+    "london": "London",
+    "newYork": "Nyu-York",
+    "tokyo": "Tokio",
+    "beijing": "Pekin"
+  },
+  "time": {
+    "now": "Hozir"
+  }
+}

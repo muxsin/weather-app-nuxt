@@ -1,0 +1,58 @@
+@keyframes thunder-flash {
+  0%, 100% { opacity: 0; }
+  /* first flash */
+  5%  { opacity: 0.15; }
+  8%  { opacity: 0; }
+  /* second flash */
+  12% { opacity: 0.25; }
+  15% { opacity: 0; }
+  /* third flash */
+  40% { opacity: 0; }
+  42% { opacity: 0.12; }
+  44% { opacity: 0; }
+}
+
+@keyframes bolt-appear {
+  0%   { opacity: 0; transform: scale(0.9) translateY(-10px); }
+  10%  { opacity: 1; transform: scale(1) translateY(0); }
+  30%  { opacity: 0.8; }
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.thunder-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: $z-animation;
+  overflow: hidden;
+  contain: strict;
+
+  @include reduced-motion {
+    .thunder-overlay,
+    .thunder__bolt {
+      animation: none;
+    }
+  }
+}
+
+.thunder-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 200, 0.15);
+  animation: thunder-flash 7s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.thunder__bolt {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bolt-appear 7s ease-out infinite;
+  will-change: opacity, transform;
+
+  svg {
+    filter: drop-shadow(0 0 8px rgba(253, 224, 71, 0.8));
+  }
+}

@@ -1,0 +1,41 @@
+@keyframes wind-streak {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(110vw);
+    opacity: 0;
+  }
+}
+
+.wind-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: $z-animation;
+  overflow: hidden;
+  contain: strict;
+
+  @include reduced-motion {
+    .wind__streak {
+      animation: none;
+    }
+  }
+}
+
+.wind__streak {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.5), transparent);
+  border-radius: 1px;
+  animation: wind-streak linear infinite;
+  will-change: transform;
+}

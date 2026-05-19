@@ -1,0 +1,99 @@
+{
+  "common": {
+    "today": "Today",
+    "hourly": "Hourly Forecast",
+    "weekly": "Weekly Forecast",
+    "chooseCity": "Choose City",
+    "search": "Search city...",
+    "noResults": "No results"
+  },
+  "weather": {
+    "details": {
+      "temperature": "Temperature",
+      "feelsLike": "Feels like",
+      "pressure": "Pressure",
+      "precipitation": "Precipitation",
+      "wind": "Wind",
+      "humidity": "Humidity"
+    },
+    "description": {
+      "0": "Clear sky",
+      "1": "Mainly clear",
+      "2": "Partly cloudy",
+      "3": "Overcast",
+      "45": "Fog",
+      "48": "Icy fog",
+      "51": "Light drizzle",
+      "53": "Drizzle",
+      "55": "Heavy drizzle",
+      "61": "Light rain",
+      "63": "Rain",
+      "65": "Heavy rain",
+      "71": "Light snow",
+      "73": "Snow",
+      "75": "Heavy snow",
+      "77": "Snow grains",
+      "80": "Showers",
+      "81": "Rain showers",
+      "82": "Heavy showers",
+      "85": "Snow showers",
+      "86": "Heavy snow showers",
+      "95": "Thunderstorm",
+      "96": "Thunderstorm with hail",
+      "99": "Thunderstorm heavy hail"
+    },
+    "normal": "normal",
+    "noPrecipitation": "No precipitation",
+    "units": {
+      "mmHg": "mmHg",
+      "ms": "m/s",
+      "mm": "mm",
+      "percent": "%"
+    }
+  },
+  "compass": {
+    "N": "North",
+    "NE": "Northeast",
+    "E": "East",
+    "SE": "Southeast",
+    "S": "South",
+    "SW": "Southwest",
+    "W": "West",
+    "NW": "Northwest"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toggle": "Toggle theme"
+  },
+  "seo": {
+    "home": {
+      "title": "WeatherApp — Real-time Weather Forecast",
+      "description": "Check current weather, hourly and 7-day forecast for any city. Default: Tashkent.",
+      "keywords": ["weather", "forecast", "WeatherApp"]
+    }
+  },
+  "modal": {
+    "cityPicker": {
+      "title": "Choose City",
+      "commonCities": "Popular cities"
+    }
+  },
+  "cities": {
+    "tashkent": "Tashkent",
+    "samarkand": "Samarkand",
+    "bukhara": "Bukhara",
+    "moscow": "Moscow",
+    "almaty": "Almaty",
+    "bishkek": "Bishkek",
+    "istanbul": "Istanbul",
+    "dubai": "Dubai",
+    "london": "London",
+    "newYork": "New York",
+    "tokyo": "Tokyo",
+    "beijing": "Beijing"
+  },
+  "time": {
+    "now": "Now"
+  }
+}

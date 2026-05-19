@@ -1,0 +1,65 @@
+@keyframes cloud-drift-1 {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(110vw); }
+}
+
+@keyframes cloud-drift-2 {
+  from { transform: translateX(110vw); }
+  to   { transform: translateX(-100%); }
+}
+
+.clouds-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: $z-animation;
+  overflow: hidden;
+  contain: strict;
+
+  @include reduced-motion {
+    .cloud {
+      animation: none;
+    }
+  }
+}
+
+.cloud {
+  position: absolute;
+  opacity: 0.6;
+  will-change: transform;
+
+  svg {
+    fill: var(--color-text-muted);
+    opacity: 0.4;
+  }
+
+  &--1 {
+    top: 6%;
+    left: -200px;
+    width: 280px;
+    animation: cloud-drift-1 40s linear infinite;
+  }
+
+  &--2 {
+    top: 15%;
+    right: -300px;
+    width: 360px;
+    animation: cloud-drift-2 60s linear infinite;
+  }
+
+  &--3 {
+    top: 30%;
+    left: -250px;
+    width: 200px;
+    opacity: 0.4;
+    animation: cloud-drift-1 80s linear infinite;
+  }
+
+  &--4 {
+    top: 50%;
+    right: -200px;
+    width: 240px;
+    opacity: 0.3;
+    animation: cloud-drift-2 100s linear infinite;
+  }
+}
